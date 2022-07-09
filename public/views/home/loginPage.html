@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadre</title>
+    <link rel="stylesheet" href="/views/home/style.css">
+   
+</head>
+
+<body>
+
+
+    <script type="module">
+        import Login from "/views/components/login/login.js";
+
+        function clickEmulator(url) {
+            const a = document.createElement('a');
+            a.target = '_blank';
+            a.href = url;
+            var evt = document.createEvent("MouseEvents");
+            evt.initMouseEvent("click", true, true, window,
+                0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                a.dispatchEvent(evt);
+        }
+        const login = new Login({
+            authList: [
+                {
+                    name: 'facebook',
+                    onClick: (v) => {
+                        if (confirm('Facebook'))    clickEmulator('http://m.faceboock.com');
+                    },
+                    urlIcon: '/views/img/facebook.png',
+                },
+                {
+                    name: 'google',
+                    onClick: (v) => {
+                        if (confirm('google'))clickEmulator('https://accounts.google.com/ServiceLogin?service=peoplesense');
+                    },
+                    urlIcon: '/views/img/google-plus.png',
+                },
+                {
+                    name: 'in',
+                    onClick: (v) =>{ 
+                        if (confirm('in')) clickEmulator('https://fr.linkedin.com/');
+                    },
+                    urlIcon: '/views/img/linked-in-logo-of-two-letters.png',
+                }
+
+            ]
+        });
+        login.when('finish', (tab) =>{
+            const clearAnim = new login.Anim({
+                duration: 100
+            }).when('progress', (p) =>{
+                login.getView().style.opacity = (1-p)+'';
+            }).when('onEnd', (p) =>{
+                login.getView().style.display = 'none';
+            }).start();
+            console.log(tab);
+        });
+        document.body.append(login.getView());
+
+        
+
+    </script>
+</body>
+
+</html>

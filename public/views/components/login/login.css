@@ -1,0 +1,145 @@
+
+/****************************************/
+/**                login               **/
+/****************************************/
+.login{
+   overflow:hidden;
+    width: 90%;
+    height:600px;
+    max-width: 1000px;
+    position: relative;
+    background: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo{
+    z-index: 1;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgba(116, 116, 116, 0.52);
+}
+.logo .icon{
+    width: 40px;
+    height: 40px;
+    filter :invert(30%);
+    margin: 0px 5px 0px 10px;
+    border-radius: 100px;
+    border: 1px solid #333;
+    background: no-repeat center/60% url('../login/img/profile-user.png');
+
+}
+
+/****************************************/
+/**             info-page              **/
+/****************************************/
+.login .info-page{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 5%;
+}
+
+.login .page-title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(27, 173, 154);
+    margin: 80px 0 10px 0;
+}
+.auth-list{
+    display: flex;
+}
+.auth-list .icon{
+    width: 40px;
+    height: 40px;
+    filter :invert(30%);
+    margin: 0px 10px;
+    border-radius: 100px;
+    border: 1px solid #333;
+}
+.login .message{
+    font-size: 0.8em;
+    color: rgba(51, 51, 51, 0.466);
+    margin: 15px 0 15px 0;
+}
+
+
+.forget-btn{
+    display:none;
+    color: rgb(51, 51, 51);
+    margin: 10px 0;
+    border-bottom: 2px solid rgba(150, 147, 147, 0.126);;
+    padding: 3px 0px;
+}
+.submit-button{
+    background:  rgb(27, 173, 154);
+    color: #fff;
+    margin: 30px 0;
+    padding: 15px 50px ;
+    border-radius: 100px;
+}
+
+
+/****************************************/
+/**            prompt-page             **/
+/****************************************/
+.prompt-page{
+    overflow: hidden;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:  rgb(27, 173, 154);
+    left : 0;
+}
+.prompt-cotainer{
+    width: 25vw;
+    max-width: 300px;
+    margin: 0px 0 20px 0;
+
+}
+.prompt-sign{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prompt-sign .title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    /* margin: 0px 0 px 0; */
+}
+.prompt-sign .message{
+    font-size: 1.05em;
+    color: rgba(255, 255, 255, 0.718);
+    line-height: 1.6em;
+    font-family: system-ui;
+}
+
+.sign-button{
+    text-align: center;
+    width : 55%;
+    background:  rgb(27, 173, 154);
+    color: #fff;
+    margin: 30px 0;
+    padding: 15px 0 ;
+    border : 1px solid #fff;
+    border-radius: 100px;
+    font-size: 00.8em;
+
+}

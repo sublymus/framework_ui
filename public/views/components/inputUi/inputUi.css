@@ -1,0 +1,21 @@
+.input-ui{
+    background: rgba(0, 0, 0, 0.048);
+    width: 70%;
+    height: 50px;
+    margin: 5px 0 5px 0;
+    display: flex;
+    align-items: center;
+    color : rgba(37, 37, 37, 0.72);
+}
+.input-ui .icon{
+    width: 25px;
+    height: 25px;
+    filter :invert(70%);
+    margin: 0px 7px 0px 10px;
+}
+
+.input-ui input{
+   all: unset;
+   padding: 5px 5px; 
+   width: 80%;
+}
