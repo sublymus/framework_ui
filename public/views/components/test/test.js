@@ -21,6 +21,7 @@ class Test extends BaseComponent{
             [rootName]: (elem, elems) => {
                  // DO ALL YOU WANT HERE;
                  // AND CATCH ALL YOU WANT;
+                 // plus de blabla
             }
         };
         return { tree, action };
