@@ -18,14 +18,13 @@ class RotatifViewer extends BaseComponent{
         }, data);
     }
     elementTree(_, rootName, $, $All) {
-        const tree = _('div', rootName);
+        const tree = _('div', rootName,...this.views); //root.append(...this.views);
         
         const action = {
             
             [rootName]: (root) => {
 
-                root.append(...this.views);
-
+                
                 const list = [];
                 const periode = -Math.PI*2 ;
                 let option = 1;
