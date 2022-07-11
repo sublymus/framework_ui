@@ -14,7 +14,8 @@ app.use(favicon(path.join(config.root, 'public', 'views','img', 'favicon.ico')))
 
 // root paths
 app.get("/", (req, res, next) => {
-  res.sendFile(config.root+"/public/views/home/loginPage.html");        // test Anim
+  //res.sendFile(config.root+"/public/views/home/loginPage.html");        // test Anim
+  res.sendFile(config.root+"/public/views/home/rotatif.html");        // test Anim
   //res.sendFile(config.root+"/public/views/lib/anim/animExample.html");// test Component
 });
 

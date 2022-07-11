@@ -1,0 +1,17 @@
+.view{
+    position: absolute;
+    background : #333;
+    width : 100px;
+    height: 100px;
+    font-size : 5em;
+    text-align : center;
+}
+.rotatif-viewer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     perspective: 300px;
+     transform-style: preserve-3d;
+}
